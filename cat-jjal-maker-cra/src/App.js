@@ -1,39 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko">
+import logo from './logo.svg';
+import React from "react"
+import './App.css';
+import Tit from "./components/Title"
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>고양이 가라사대</title>
-</head>
-<style>
-  body {
-    text-align: center;
-  }
-
-  .main-card button {
-    position: relative;
-    left: -45px;
-    bottom: 15px;
-  }
-
-  .favorites {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-</style>
-
-<body>
-  <div id="app"></div>
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script type="text/babel">
-  const jsonLocalStorage = {
+const jsonLocalStorage = {
   setItem: (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
     },
@@ -104,11 +74,6 @@
         </form>
       )
     }
-    const Tit = (props) => {
-      return (
-        <h1>{props.children}</h1>
-      )
-    }
     const App = () => {
       const CAT1 = "https://cataas.com/cat/60b73094e04e18001194a309/says/react";
       const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
@@ -165,9 +130,5 @@
        </div>
        )
     }
-    const 여기다그려줘 = document.querySelector('#app');
-    ReactDOM.render(<App/>,여기다그려줘);
-  </script>
-</body>
 
-</html>
+export default App;
